@@ -1,0 +1,38 @@
+\documentclass{book}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{mathtools} % loads the ams-packages and provides some fixes
+\usepackage{lipsum} % for dummy text only
+
+\renewcommand{\thechapter}{\Alph{chapter}} % change chapter numbering to A, B, C, ...
+\newtheorem{mytheorem}{Theorem} % define new theorem style
+
+\begin{document}
+\input{titlepage}
+{\let\cleardoublepage\relax \frontmatter}
+\tableofcontents
+
+\chapter{Design}
+\lipsum[1]
+
+\begin{mytheorem} %first theorem - this will be "A.1"
+\begin{align}
+    a^2+b^2=c^2
+\end{align}
+\end{mytheorem}
+
+\lipsum[2-5]
+
+\chapter{Procedure}
+
+\chapter{Appendix}
+\lipsum[6-8]
+
+\begin{mytheorem} %second theorem - this will be B.1
+\begin{align}
+   1+1=3
+\end{align}
+\end{mytheorem}
+
+\lipsum[9]
+
+\end{document}
